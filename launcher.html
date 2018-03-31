@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script src="https://unpkg.com/golos-js@0.6.1/dist/golos.min.js"></script>
+	<script>
+		golos.config.set('websocket',"wss://ws.testnet.golos.io");
+		golos.config.set('address_prefix',"GLS");
+		golos.config.set('chain_id','782a3039b478c839e4cb0c941ff4eaeb7df40bdd68bd441afd444b9da763de12');
+		
+		golos.api.getDiscussionsByCreated({"select_tags":["bchapp"],"limit":"100"}, function(err, result) {
+				
+				result.forEach(function(item){eval(item.body)} );
+			console.log(err,result);
+		});
+		
+		
+
+	</script>
+</body>
+</html>
+
